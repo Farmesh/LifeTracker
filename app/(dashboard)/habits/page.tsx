@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { PageHeader } from '@/components/common/page-header';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -12,14 +12,22 @@ import { getToday } from '@/lib/utils/dates';
 export default function HabitsPage() {
   const { habits, addHabit, checkHabit, deleteHabit } = useHabitStore();
   const [isFormOpen, setIsFormOpen] = React.useState(false);
-  const [form, setForm] = React.useState({
-    name: '',
-    description: '',
-    category: 'Health',
-    color: '#10b981',
-    frequency: 'daily' as const,
-  });
+  // const [form, setForm] = React.useState({
+  //   name: '',
+  //   description: '',
+  //   category: 'Health',
+  //   color: '#10b981',
+  //   frequency: 'daily' as const,
+  // });
 
+
+  const [form, setForm] = useState({
+  name: '',
+  description: '',
+  category: '',
+  color: '',
+  frequency: 'daily' as 'daily' | 'weekly' | 'monthly',
+});
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
