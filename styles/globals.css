@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: rgb(229, 231, 235);
+  }
+
+  body {
+    background-color: rgb(249, 250, 251);
+    color: rgb(17, 24, 39);
+  }
+
+  h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+
+/* Smooth animations */
+@layer components {
+  .transition-smooth {
+    transition: all 200ms ease-out;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+
+  .card-gradient {
+    background-image: linear-gradient(to bottom right, #ffffff, rgb(249, 250, 251));
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
